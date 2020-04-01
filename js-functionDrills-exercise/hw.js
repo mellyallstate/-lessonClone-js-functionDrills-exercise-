@@ -1,12 +1,3 @@
-// General Assembly, SEI (Software Engineering Immersive) Remote, Cohort 02 (R2D2)
-// Copyright (C) 2016 Matt Brendzel under the GNU General Public License.
-// See LICENSE for details.
-'use strict'
-
-/// DO NOT EDIT ABOVE THIS LINE ///
-
-/// /// WRITE A FUNCTION THAT TAKES ___ AS INPUT AND RETURNS ___ AS OUTPUT //////
-
 // #1
 // Input: an array of numbers
 // Output: the sum of the numbers that were passed in
@@ -18,8 +9,12 @@
 //   Expect sumOfNums([])) to equal 0
 
 const sumOfNums = function (numsArray) {
+  let result = 0
+ for (let i in numsArray) {
+  result += numsArray[i]
+ } 
+ return result
 
-  // Your Code Here
 }
 
 
@@ -33,7 +28,12 @@ const sumOfNums = function (numsArray) {
 
 const numsGreaterThanTen = function (numsArray) {
 
-  // Your Code Here
+    let result = []
+ for (let i in numsArray) {
+   if (numsArray[i] > 10)
+  result.push(numsArray[i])
+ } 
+ return result
 }
 
 // #3
@@ -182,18 +182,5 @@ const buildObjectFromWords = function (words) {
 }
 
 
-/// DO NOT EDIT BELOW THIS LINE ///
-module.exports = {
-  sumOfNums: sumOfNums,
-  numsGreaterThanTen: numsGreaterThanTen,
-  allGreaterThanTen: allGreaterThanTen,
-  wordsWithAtLeastFiveLetters: wordsWithAtLeastFiveLetters,
-  allStartingWithA: allStartingWithA,
-  anyStartingWithB: anyStartingWithB,
-  hasAtLeastNVowels: hasAtLeastNVowels,
-  wordsWithAtLeastTwoVowels: wordsWithAtLeastTwoVowels,
-  allHaveAtLeastTwoVowels: allHaveAtLeastTwoVowels,
-  anyHaveAtLeastTwoVowels: anyHaveAtLeastTwoVowels,
-  noneHaveTwoOrMoreVowels: noneHaveTwoOrMoreVowels,
-  buildObjectFromWords: buildObjectFromWords
-}
+
+

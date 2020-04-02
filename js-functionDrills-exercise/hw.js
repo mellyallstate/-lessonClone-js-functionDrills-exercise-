@@ -49,8 +49,16 @@ const numsGreaterThanTen = function (numsArray) {
 //   Expect allGreaterThanTen([])).to.equal(true);
 
 const allGreaterThanTen = function (numsArray) {
-
-  // Your Code Here
+  if(numsArray.length === 0 ) {
+    return true
+  }
+  
+  for (let i = 0; i < numsArray.length; i++) 
+    if (numsArray[i] <= 10 ){
+       return false
+    }
+}
+ return true 
 }
 
 // #4
@@ -60,9 +68,18 @@ const allGreaterThanTen = function (numsArray) {
 //  Expect wordsWithAtLeastFiveLetters(['alphabet', 'banana', 'carrot', 'doe', 'egg'])
 //    to equal ['alphabet', 'banana', 'carrot']
 
+
 const wordsWithAtLeastFiveLetters = function (words) {
 
-  // Your Code Here
+  const fiveLettersOrMore = []
+   for(let i = 0; i < words.length; i++) {
+   if(words[i].length >= 5) {
+     fiveLettersOrMore.push(words[i])
+   }
+}
+
+return fiveLettersOrMore
+
 }
 
 // #5
@@ -75,9 +92,17 @@ const wordsWithAtLeastFiveLetters = function (words) {
 //  Expect allStartingWithA(['Amy', 'Bob'])) to equal false
 //  Expect allStartingWithA([]) to equal true
 
-const allStartingWithA = function (words) {
 
-  // Your Code Here
+Const allStartingWithA = function (words) {
+    if (word.length === 0){
+
+    }
+  for ( let i = 0; i < words.length; i++ ){
+        let splitWord = words[i].split 
+         if(splitWord[0] !== 'A' && splitWord !== 'a')
+             return false 
+  }
+  
 }
 
 // #6
@@ -119,10 +144,28 @@ const hasAtLeastNVowels = function (word, n) {
 //   Expect wordsWithAtLeastTwoVowels(['alphabet', 'bun', 'can', 'doe', 'egg'])
 //     to equal ['alphabet', 'doe']
 
-const wordsWithAtLeastTwoVowels = function (words) {
+const wordsWithAtLeastTwoVowels = function (_words, n) {
+      if (n < o) { 
+        return null
+      }
+      
+      const vowels = "aeiou"
+      let vowelCount = 0 
 
-  // Your Code Here
+      for (let i = 0; i <  word.length; i++) {  
+        for (let j = 0; j < vowels.length; j++) {
+          vowelCount++
+        }
+       }
+      }
+// console.log(vowel count = ',vowelCount)
+if (vowelCount >= n) {
+} else {
+  return false 
+ }
 }
+console.log(hasAtLeastNVowels('uncopywriteable',2))
+
 
 // #9
 // Input: an array of words
